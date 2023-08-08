@@ -1,0 +1,86 @@
+/* App.css */
+
+*{
+ 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+   
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #94f3e6;
+  padding: 10px;
+  flex-wrap: wrap;
+  
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+.namelog {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.namelog div {
+ 
+  font-size: 18px;
+}
+
+.namelog button {
+  padding: 6px 12px;
+  background-color: #ff3333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.item-1 {
+  flex: 1;
+}
+
+.item-2 {
+  
+  flex: 0.3;
+  margin-left: 20px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.slider{
+  display: none;
+}
+
+@media (max-width: 767px) {
+ .nam{
+  display: none;
+ }
+ .item-2{
+  display: none;
+ }
+ .slider{
+  display: block;
+ }
+} 
+

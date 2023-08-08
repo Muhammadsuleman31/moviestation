@@ -1,0 +1,52 @@
+/* form.css */
+
+.form {
+    
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    
+  }
+  
+  .form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form input[type="text"],
+  .form input[type="number"] {
+    border: solid 1px lightgray;
+    outline: none;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .form input[type="number"] {
+    width: 60px;
+  }
+  .form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .form button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .form button:hover {
+    background-color: #45a049;
+  }
+  

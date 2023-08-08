@@ -1,0 +1,63 @@
+.loginpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginform {
+  width: 300px;
+  padding: 100px;
+  background-color: #c0eeec;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loginform label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.loginform input[type="text"],
+.loginform input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.loginform button.btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.loginform button.btn:hover {
+  background-color: #45a049;
+}
+
+.loginform .text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.loginform .text a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+
+.pass{
+  font-size:small;
+}
+
+@media screen and (min-width: 768px) {
+
+}

@@ -1,0 +1,105 @@
+.signuppage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signuppage form {
+  width: 300px;
+  padding: 100px;
+  background-color: #c0eeec;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signuppage form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.signuppage form input[type="text"],
+.signuppage form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.signuppage form button.btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signuppage form button.btn:hover {
+  background-color: #45a049;
+}
+
+.signuppage form .text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signuppage form .text a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.signuppage > div {
+  display: flex;  
+  color: black;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.eye-icon {
+  position: relative;
+  left: -25px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.input-error {
+  border: 1px solid #ff0000 !important; /* Red border color */
+}
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FF7F7F;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-icon.show {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
