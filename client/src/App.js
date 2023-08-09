@@ -58,8 +58,8 @@ useEffect(() => {
         logout();
         return;
       }
-      total = datas.pop();
       setdata(datas);
+      
     })
     .catch(error => {
       console.error("An error occurred:", error);
