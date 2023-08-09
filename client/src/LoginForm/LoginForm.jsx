@@ -56,7 +56,7 @@ const navigate = useNavigate()
             password : ''
         }) 
           
-        console.log(userData)
+        
           navigate("/")
 
         }   
@@ -68,10 +68,12 @@ const navigate = useNavigate()
 
   const toggle = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
-    console.log(showPassword)
+    
   };
 
- 
+ function signuppage(){
+    navigate("/signup")
+ }
     return(
 
         <>
@@ -87,7 +89,7 @@ const navigate = useNavigate()
            </label>
         
            <button type="submit" className="btn" onClick={done}>Login</button>
-           <div className="text" >Don't have Account ?<a href="/signup">Signup</a> </div>
+           <div className="text" >Don't have Account ?<span onClick={signuppage}>Signup</span> </div>
    
         </form> 
         {!validemail && <div>Email is not valid</div>}

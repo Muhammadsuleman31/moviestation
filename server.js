@@ -16,10 +16,10 @@ import verify from "./middlewear/verify.js"
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 
+app.use(cors())
 const app = express();
 app.use(express.json());
-app.use(cors())
-
+mongoose.set('strictQuery', false);
 
 const uri = "mongodb+srv://Muhammadsuleman:4xPkTcYLKgK9hrw@cluster0.i8j8ksq.mongodb.net/sample_mflix?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true })

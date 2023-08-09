@@ -48,7 +48,8 @@
   font-size: 14px;
 }
 
-.loginform .text a {
+.loginform span{
+  cursor: pointer;
   color: #4caf50;
   text-decoration: none;
 }

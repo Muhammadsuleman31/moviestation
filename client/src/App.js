@@ -49,18 +49,23 @@ const [pageinfo,setPageinfo] = useState({})
 
 
 useEffect(() => {
-  axios.get("/api",{headers :{ Authorization : localStorage.getItem("token")}})
-  .then(response=>{
-    var datas = response.data
-    if(datas.hasOwnProperty('message')){
-      alert(datas.message)
-      logout()
-      return
-   } 
-     total = datas.pop()
-    setdata(datas)
-  }) 
- }, []);
+  console.log("apigg");
+  axios.get("/api", { headers: { Authorization: localStorage.getItem("token") } })
+    .then(response => {
+      var datas = response.data;
+      if (datas.hasOwnProperty('message')) {
+        alert(datas.message);
+        logout();
+        return;
+      }
+      total = datas.pop();
+      setdata(datas);
+    })
+    .catch(error => {
+      console.error("An error occurred:", error);
+      // You can add additional error handling here, if needed
+    });
+}, []);
 
 function Addme(movie){
   axios.post("/addmovie",movie,{headers :{ Authorization : localStorage.getItem("token")}})
