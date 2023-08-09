@@ -20,6 +20,7 @@ app.use(cors())
 const app = express();
 app.use(express.json());
 mongoose.set('strictQuery', false);
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 const uri = "mongodb+srv://Muhammadsuleman:4xPkTcYLKgK9hrw@cluster0.i8j8ksq.mongodb.net/sample_mflix?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true })
@@ -88,7 +89,7 @@ app.post("/addmovie", verify,(req,res)=>{
 
 mongo.save()
     .then((result)=> res.send(result))
-    .catch(err => consnole.log(err))
+    .catch(err => connsole.log(err))
   
  
 
