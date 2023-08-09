@@ -59,7 +59,7 @@ useEffect(() => {
         return;
       }
       setdata(datas);
-      
+      total = 45
     })
     .catch(error => {
       console.error("An error occurred:", error);
