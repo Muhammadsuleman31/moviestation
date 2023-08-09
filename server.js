@@ -63,12 +63,13 @@ var total;
 
 
 
-app.get("/api", verify, (req, res) => {
+app.post("/api", verify, (req, res) => {
 
   
   // console.log(req.userId)
   Movies.find().count(function(err, count){
     total = count;
+    total = total - 1849;
 });
   
   Movies.find()
