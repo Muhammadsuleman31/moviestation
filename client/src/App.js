@@ -58,8 +58,11 @@ useEffect(() => {
         logout();
         return;
       }
+      if(response.status==200){
+        console.log("gg")
+      total = datas.pop();
       setdata(datas);
-      total = 45
+    }
     })
     .catch(error => {
       console.error("An error occurred:", error);
