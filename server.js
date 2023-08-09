@@ -63,7 +63,7 @@ var total;
 
 
 
-app.get("/api", (req, res) => {
+app.get("/api", verify, (req, res) => {
 
   
   // console.log(req.userId)

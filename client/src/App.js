@@ -52,18 +52,17 @@ useEffect(() => {
   console.log("apigg");
   axios.get("/api", { headers: { Authorization: localStorage.getItem("token") } })
     .then(response => {
-      console.log(response)
+      console.log("i ran")
       var datas = response.data;
       if (datas.hasOwnProperty('message')) {
         alert(datas.message);
         logout();
         return;
       }
-      if(response.status==200){
         console.log("gg")
       total = datas.pop();
       setdata(datas);
-    }
+  
     })
     .catch(error => {
       console.error("An error occurred:", error);

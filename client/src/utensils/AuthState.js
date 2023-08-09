@@ -12,6 +12,9 @@ const AuthState = (props) => {
     if(user){
         setAuth(user)
     }
+    else{
+      return <Navigate to="/login" />;
+    }
 },[])
 
 
