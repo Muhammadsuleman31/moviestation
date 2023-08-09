@@ -52,6 +52,7 @@ useEffect(() => {
   console.log("apigg");
   axios.get("/api", { headers: { Authorization: localStorage.getItem("token") } })
     .then(response => {
+      console.log(response)
       console.log("i ran")
       var datas = response.data;
       if (datas.hasOwnProperty('message')) {
