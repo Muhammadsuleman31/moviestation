@@ -11,6 +11,8 @@ import "./App.css"
 import Search from './Search/Search';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import IconButton from '@mui/material/IconButton';
+import ClearIcon from '@mui/icons-material/Clear';
 
 
 var didMount = false
@@ -45,49 +47,41 @@ const [pageinfo,setPageinfo] = useState({})
 
 
 function helper(){
-  axios.get("/api", { headers: { Authorization: localStorage.getItem("token") } })
-  .then(response => {
-    console.log(response)
-    console.log("i ranned")
-    var datas = response.data;
-    if (datas.hasOwnProperty('message')) {
-      alert(datas.message);
-      logout();
-      return;
-    }
-      console.log("gg")
-    total = datas.pop();
-    setdata(datas);
-
-  })
-  .catch(error => {
-    console.error("An error occurred:", error);
-    // You can add additional error handling here, if needed
-  });
-}
-
-
-
-useEffect(() => {
-  console.log("apigg");
   axios.post("/api",page, { headers: { Authorization: localStorage.getItem("token") } })
     .then(response => {
-      console.log(response)
-      console.log("i ran")
       var datas = response.data;
       if (datas.hasOwnProperty('message')) {
         alert(datas.message);
         logout();
         return;
       }
-        console.log("gg")
       total = datas.pop();
       setdata(datas);
   
     })
     .catch(error => {
       console.error("An error occurred:", error);
-      // You can add additional error handling here, if needed
+    });
+
+}
+
+
+
+useEffect(() => {
+  axios.post("/api",page, { headers: { Authorization: localStorage.getItem("token") } })
+    .then(response => {
+      var datas = response.data;
+      if (datas.hasOwnProperty('message')) {
+        alert(datas.message);
+        logout();
+        return;
+      }
+      total = datas.pop();
+      setdata(datas);
+  
+    })
+    .catch(error => {
+      console.error("An error occurred:", error);
     });
 }, []);
 
@@ -213,14 +207,17 @@ function changepage(){
   <>
   <div className='nav'>
     <a  href="/">MovieHub</a>
-  <button onClick={helper}>okaaaaaaaaaa</button>
-   { a.auth && <div className='namelog'><div className='nam'>{a.auth.name}</div><button onClick={logout}>Logout</button>  {/* Button to toggle the menu */}
+
+   { a.auth && <div className='namelog'>  <button className='home-button' onClick={helper}>Home</button><div className='nam'>{a.auth.name}</div><button onClick={logout}>Logout</button>  {/* Button to toggle the menu */}
 <div className='slider'>
 <MenuIcon onClick={toggleMenu} />
 <Drawer anchor="left" open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
   <List>
-    <ListItem button onClick={changepage}>
-      <ListItemText primary="Add Movie" />
+    <ListItem>
+      <ListItemText className='addm' onClick={changepage} primary="Add Movie" />
+      <IconButton onClick={toggleMenu}>
+      <ClearIcon />
+    </IconButton>
     </ListItem>
     <ListItem>
     <Checkbox onfilter={filterMe}/>

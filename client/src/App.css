@@ -8,6 +8,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
+  font-family: 'Lugrasimo', cursive;
+  
    
 }
 
@@ -40,10 +42,12 @@ body {
 
 .namelog button {
   padding: 6px 12px;
-  background-color: #ff3333;
+  background-color:  #4caf50;;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .hero {
@@ -84,3 +88,21 @@ body {
  }
 } 
 
+
+.home-button {
+  background-color:  #4caf50; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.namelog button:hover {
+  background-color:  #45a049;;
+}
+
+.addm{
+  cursor: pointer;
+}

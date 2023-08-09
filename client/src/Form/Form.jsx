@@ -3,6 +3,9 @@ import { useState } from "react";
 import "./form.css"
 import axios from "axios"
 import { useNavigate } from 'react-router-dom';
+import { IconButton } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 
 function Form(pros){
     const navigate = useNavigate();
@@ -15,6 +18,7 @@ function Form(pros){
     runtime:"",
     poster:"",
 })   
+
 
 
  function handleChange(event){
@@ -59,9 +63,19 @@ function done(e){
 }
 
 
+function handleBack(){
+    navigate('/')
+}
+
 
 return(
-    
+<>    
+<IconButton 
+  style={{ display: window.innerWidth > 768 ? 'none' : 'block' }}
+onClick={handleBack} 
+aria-label="Back">
+    <ArrowBackIcon  />
+  </IconButton>
     <form className="form">
         <label>
             Title: 
@@ -100,8 +114,11 @@ return(
         </label>
 
         <button type="submit" onClick={done}>Submit</button>
+        
 
     </form>
+ 
+</>
 )
 
 
