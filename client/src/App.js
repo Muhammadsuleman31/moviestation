@@ -70,7 +70,7 @@ function helper(){
 
 useEffect(() => {
   console.log("apigg");
-  axios.post("/api", { headers: { Authorization: localStorage.getItem("token") } })
+  axios.post("/api",page, { headers: { Authorization: localStorage.getItem("token") } })
     .then(response => {
       console.log(response)
       console.log("i ran")
