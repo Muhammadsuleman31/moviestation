@@ -44,7 +44,27 @@ const pageSize = 10;
 const [pageinfo,setPageinfo] = useState({})
 
 
+function helper(){
+  axios.get("/api", { headers: { Authorization: localStorage.getItem("token") } })
+  .then(response => {
+    console.log(response)
+    console.log("i ranned")
+    var datas = response.data;
+    if (datas.hasOwnProperty('message')) {
+      alert(datas.message);
+      logout();
+      return;
+    }
+      console.log("gg")
+    total = datas.pop();
+    setdata(datas);
 
+  })
+  .catch(error => {
+    console.error("An error occurred:", error);
+    // You can add additional error handling here, if needed
+  });
+}
 
 
 
@@ -193,6 +213,7 @@ function changepage(){
   <>
   <div className='nav'>
     <a  href="/">MovieHub</a>
+  <button onClick={helper}>okaaaaaaaaaa</button>
    { a.auth && <div className='namelog'><div className='nam'>{a.auth.name}</div><button onClick={logout}>Logout</button>  {/* Button to toggle the menu */}
 <div className='slider'>
 <MenuIcon onClick={toggleMenu} />
