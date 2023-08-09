@@ -69,14 +69,12 @@ app.get("/api", verify, (req, res) => {
   // console.log(req.userId)
   Movies.find().count(function(err, count){
     total = count;
-    console.log(total)
-    total = total - 1849;
 });
   
   Movies.find()
   .limit(10)
   .then((result)=> res.json([...result,total]))
-  .catch(err => console.log(err))
+  .catch(err => res.json(err))
   
 });
 
