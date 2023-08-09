@@ -16,8 +16,8 @@ import verify from "./middlewear/verify.js"
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors())
 const app = express();
+app.use(cors())
 app.use(express.json());
 mongoose.set('strictQuery', false);
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
