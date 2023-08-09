@@ -63,7 +63,7 @@ var total;
 
 
 
-app.get("/apii", verify, (req, res) => {
+app.get("/api", verify, (req, res) => {
 
   
   // console.log(req.userId)
@@ -105,7 +105,7 @@ app.post("/removemovie", verify, (req,res)=>{
 
 var filterinfo;
 
-app.post("/api", verify, (req,res)=>{
+app.post("/filter", verify, (req,res)=>{
   
   filterinfo = clean(req.body);
   console.log(filterinfo)
