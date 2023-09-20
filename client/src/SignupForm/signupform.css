@@ -19,9 +19,9 @@
   margin-bottom: 10px;
 }
 
-.signuppage form input[type="text"],
+ .signuppage form input[type="text"],
 .signuppage form input[type="password"] {
-  width: 100%;
+  width: 90%;
   padding: 8px;
   font-size: 14px;
   border-radius: 4px;
