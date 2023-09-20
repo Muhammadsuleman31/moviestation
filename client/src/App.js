@@ -214,7 +214,7 @@ function changepage(){
 <Drawer anchor="left" open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
   <List>
     <ListItem>
-      <ListItemText onClick={changepage} primary="Add Movie" />
+      <ListItemText onClick={changepage} primary="Add Movie" className='adder' />
       <IconButton onClick={toggleMenu}>
       <ClearIcon />
     </IconButton>
