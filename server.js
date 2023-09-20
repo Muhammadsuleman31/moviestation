@@ -24,7 +24,7 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 const uri = "mongodb+srv://Muhammadsuleman:4xPkTcYLKgK9hrw@cluster0.i8j8ksq.mongodb.net/sample_mflix?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true })
-    .then(()=> app.listen(PORT, ()=>{ console.log('listening at port 5000')}))
+    .then(()=> app.listen(PORT, ()=>{ console.log(`listening at ${PORT}`)}))
     .catch(err => console.log(err))
 
 
