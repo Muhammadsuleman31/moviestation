@@ -79,6 +79,7 @@ const navigate = useNavigate()
         <>
         <div className="loginpage">
         <form className="loginform"  autocomplete="off">
+            <h1>Sign in</h1>
            <label>
             Email: <input type="text" name="email" required onChange={changeHandler} value={userData.email} />
            </label>
@@ -89,7 +90,7 @@ const navigate = useNavigate()
            </label>
         
            <button type="submit" className="btn" onClick={done}>Login</button>
-           <div className="text" >Don't have Account ?<span onClick={signuppage}>Signup</span> </div>
+           <div className="text" >Don't have Account ? <span onClick={signuppage}>Signup</span> </div>
    
         </form> 
         {!validemail && <div>Email is not valid</div>}

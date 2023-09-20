@@ -206,7 +206,7 @@ function changepage(){
   return (
   <>
   <div className='nav'>
-    <a  href="/">MovieHub</a>
+    <h2><a  href="/">MovieHub</a></h2>
 
    { a.auth && <div className='namelog'>  <button className='home-button' onClick={helper}>Home</button><div className='nam'>{a.auth.name}</div><button onClick={logout}>Logout</button>  {/* Button to toggle the menu */}
 <div className='slider'>

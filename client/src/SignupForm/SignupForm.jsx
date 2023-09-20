@@ -107,6 +107,7 @@ async function done(e){
     return(
         <div className="signuppage">
         <form>
+            <h1>Sign up</h1>
            <label>
             Name: <input type="text" name="name" required onChange={changeHandler} value={userData.name} />
            </label>

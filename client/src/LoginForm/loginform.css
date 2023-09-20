@@ -2,16 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+   color: rgb(0, 121, 143);
+  background-color: rgb(183, 207, 207);
   height: 100vh;
-  font-family:Arial, Helvetica, sans-serif!important
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  
 }
 
 .loginform {
   width: 300px;
   padding: 100px;
-  background-color: #c0eeec;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(159, 204, 204, 0.637);
+  border-radius: 80px;
+  box-shadow: 80px 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .loginform label {
@@ -24,23 +28,30 @@
   width: 100%;
   padding: 8px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 20px;
   border: 1px solid #ccc;
+  background-color: azure;
+  margin-top: 10px;
+}
+
+.loginform input[type="password"] {
+  margin-bottom: 8px;
 }
 
 .loginform button.btn {
   width: 100%;
   padding: 8px;
-  background-color: #4caf50;
+  background-color: rgba(6, 105, 105, 0.637);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 40px;
   cursor: pointer;
   font-size: 14px;
+  margin: 10px 0px;
 }
 
 .loginform button.btn:hover {
-  background-color: #45a049;
+  background-color: rgb(0, 121, 143);
 }
 
 .loginform .text {
@@ -51,15 +62,29 @@
 
 .loginform span{
   cursor: pointer;
-  color: #4caf50;
+  color: rgb(0, 121, 143);
   text-decoration: none;
 }
 
+.text > span{
+  color: white;
+}
+
+.text > span:hover{
+  color: rgb(0, 121, 143);
+}
+
+.text {
+  color: white;
+}
 
 .pass{
   font-size:small;
 }
 
+.loginform{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 
 @media screen and (max-width: 768px) {
