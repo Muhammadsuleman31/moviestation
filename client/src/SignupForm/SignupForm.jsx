@@ -125,6 +125,7 @@ async function done(e){
            <input type={showPassword ? 'text' : 'password'} name="password" required onChange={changeHandler} value={userData.password}   className={passwordr}  /> 
            {!validpassword && (<Tooltip title="Password must contain at least 8 characters with uppercase, lowercase, digits, and special characters" placement="right" arrow> <i className="fas fa-exclamation-circle" style={{ color: '#FF7F7F', fontSize: '24px' }}></i></Tooltip>)}
           </div> 
+           <div className={`please ${!validpassword ? "good" : ""}`}>Password must contain at least 8 characters with uppercase, lowercase, digits, and special characters</div>
           <input type="checkbox" onChange={toggle}/><span className="pass">show password</span>
            </label>
         
