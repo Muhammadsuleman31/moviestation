@@ -153,7 +153,7 @@ app.post("/signupdetail", async (req,res)=>{
     res.status(200  ).json({message : "email already exist"})
   return;
 }
-
+ else{
 
 var hashedpassword = bcrypt.hashSync(req.body.password, 8);
 
@@ -171,6 +171,7 @@ res.json({
   auth : true,
   token : token
 })
+}
 
 })
   
@@ -192,5 +193,6 @@ app.post("/loginform", async (req,res)=>{
     auth : true,
     token : token
   })
+
 
 })

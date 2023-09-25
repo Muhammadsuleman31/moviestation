@@ -2,12 +2,23 @@ import React from "react"
 import "./movies.css"
 import { useState, useEffect , useContext} from 'react';
 
+import Loading from 'react-simple-loading';
 
 
 
 
 
 function Movies(pros){
+  
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Replace 2000 with the actual time your content takes to render
+  }, [pros]);
+
 
   function discard(e){
     pros.ondelete(pros.Name)
@@ -21,7 +32,15 @@ function Movies(pros){
   };
  
 return(
+  
   <div className="movie">
+    {loading ?
+           <div>
+                <Loading />
+            </div>
+    : 
+
+    <>
     <div className="img-container" > 
     {pros.Poster ? (
           <img src={pros.Poster} alt="Movie Poster" onError={handleImageError} />
@@ -36,7 +55,9 @@ return(
    <p>plot: {pros.Plot}</p>
    <button onClick={discard}>delete</button>
     </div>
+    </> }
   </div>
+ 
 )
 
 
